@@ -1,0 +1,25 @@
+inherit kf5
+
+NAME="kf5-kcmutils"
+VERSION=5.10.0
+RELEASE=1
+CATEGORY="Libs"
+SUMMARY="KDE 5 configuration modules utility library"
+DESCRIPTION="KCMUtils provides various classes to work with KCModules.
+KCModules can be created with the KConfigWidgets framework."
+
+PKG_NAMES="libKF5KCMUtils5 libKF5KCMUtils-devel"
+libKF5KCMUtils5_CONTENTS="
+	usr/bin/cygKF5KCMUtils-5.dll
+	usr/share/doc/
+	usr/share/kservicetypes5/
+	usr/share/locale/
+"
+libKF5KCMUtils_devel_REQUIRES="libKF5ConfigWidgets-devel libKF5CoreAddons-devel libKF5Declarative-devel libKF5I18n-devel libKF5IconThemes-devel libKF5ItemViews-devel libKF5KIO-devel libKF5Package-devel libKF5Service-devel libKF5XmlGui-devel libQt5Core-devel libQt5Gui-devel libQt5Quick-devel"
+libKF5KCMUtils_devel_CONTENTS="
+	usr/include/KF5/KCMUtils/
+	usr/include/KF5/kcmutils_version.h
+	usr/lib/cmake/KF5KCMUtils/
+	${QT5_MKSPECSDIR#/}/modules/qt_KCMUtils.pri
+	usr/lib/libKF5KCMUtils.dll.a
+"
